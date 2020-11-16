@@ -2,10 +2,9 @@
 
 import 'dart:io';
 
-import '../lib/util.dart';
+import 'package:heap_test/util.dart';
 
 void main() {
-  final stopwatch = Stopwatch()..start();
   final listOfLists = List<List<Object>>(1024 * 1024);
   int allocationCount = 0;
   print('');
@@ -13,9 +12,7 @@ void main() {
     for (int count = 0; count < 100; ++count) {
       listOfLists[allocationCount] = List<Object>(1024 * 1024);
       ++allocationCount;
-      cursorUp();
-      eraseLine();
-      print('${stopwatch.elapsed} -- $allocationCount');
+      showProgress('$allocationCount');
     }
     sleep(const Duration(milliseconds: 50));
   }
