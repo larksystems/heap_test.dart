@@ -1,5 +1,3 @@
-// dart --old-gen-heap-size=60000 run bin/test_max_heap_size_3.dart
-
 // Same as test #2 except adding an element of async behavior
 
 import 'dart:io';

@@ -1,5 +1,3 @@
-// dart --old-gen-heap-size=60000 run bin/test_max_heap_size.dart
-
 import 'dart:io';
 
 import 'package:heap_test/util.dart';

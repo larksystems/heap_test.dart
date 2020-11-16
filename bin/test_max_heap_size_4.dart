@@ -1,5 +1,3 @@
-// dart --old-gen-heap-size=60000 run bin/test_max_heap_size_2.dart
-
 // Same as test #2 except achieving a steady add/remove state near 32 GiB
 // so that it will churn memory for a long time
 
@@ -15,7 +13,7 @@ void main() {
   print('');
   while (true) {
     for (int count = 0; count < 100; ++count) {
-      if (numAdded < 36000) {
+      if (numAdded < 31000) {
         addToMemory();
         addToMemory();
       }
@@ -39,14 +37,7 @@ void addToMemory() {
 
 void removeFromMemory() {
   int index = random.nextInt(memory.length);
-  int half = memory.length ~/ 2;
-  if (index > half) {
-    index = index % half;
-    memory.remove(memory.keys.elementAt(index));
-  } else {
-    var map = memory[memory.keys.elementAt(index)];
-    if (map.isNotEmpty) map.remove(map.keys.first);
-  }
+  memory.remove(memory.keys.elementAt(index));
   ++numRemoved;
   showAddRemoveProgress();
 }
