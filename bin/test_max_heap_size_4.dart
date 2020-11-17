@@ -13,7 +13,7 @@ void main() {
   print('');
   while (true) {
     for (int count = 0; count < 100; ++count) {
-      if (numAdded < 31000) {
+      if (numAdded < 47000) {
         addToMemory();
         addToMemory();
       }
