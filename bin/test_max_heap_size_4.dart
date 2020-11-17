@@ -1,5 +1,5 @@
-// Same as test #2 except achieving a steady add/remove state near 32 GiB
-// so that it will churn memory for a long time
+// Simple memory test that continually allocates and discards memory
+// in way that exercises the GC and hopefully reaches a steady state.
 
 import 'dart:io';
 

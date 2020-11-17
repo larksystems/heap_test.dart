@@ -1,4 +1,7 @@
-// Same as test #2 except adding an element of async behavior
+// Simple memory test that continually allocates memory until OOM or crash
+// but does so asynchronously.
+// In the process, it also discards some allocated memory
+// to better exercise the GC.
 
 import 'dart:io';
 

@@ -1,3 +1,5 @@
+// Simple memory test that continually allocates memory until OOM or crash
+
 import 'dart:io';
 
 import 'package:heap_test/util.dart';

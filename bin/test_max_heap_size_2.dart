@@ -1,3 +1,7 @@
+// Simple memory test that continually allocates memory until OOM or crash.
+// In the process, it also discards some allocated memory
+// to better exercise the GC.
+
 import 'dart:io';
 
 import 'package:heap_test/util.dart';
